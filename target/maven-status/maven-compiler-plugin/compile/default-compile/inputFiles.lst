@@ -1,0 +1,17 @@
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\model\Order.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\exception\DBException.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\UserDAO.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\StockInterface.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\model\User.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\service\UserService.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\model\Stock.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\UserInterface.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\validator\UserValidator.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\service\AdminService.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\util\ConnectionUtil.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\OrderInterface.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\StockDAO.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\dao\OrderDAO.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\exception\ServiceException.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\exception\ValidatorException.java
+E:\JavaPractice\waterplant_webappcore\src\main\java\com\revature\waterplant_webapp\model\Reserve.java
