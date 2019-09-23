@@ -2,6 +2,8 @@ package com.revature.waterplant_webapp.service;
 
 import com.revature.waterplant_webapp.dao.OrderDAO;
 import com.revature.waterplant_webapp.dao.OrderInterface;
+import com.revature.waterplant_webapp.dao.ReserveDAO;
+import com.revature.waterplant_webapp.dao.ReserveInterface;
 import com.revature.waterplant_webapp.dao.StockDAO;
 import com.revature.waterplant_webapp.dao.StockInterface;
 import com.revature.waterplant_webapp.dao.UserDAO;
@@ -10,6 +12,7 @@ import com.revature.waterplant_webapp.exception.DBException;
 import com.revature.waterplant_webapp.exception.ServiceException;
 import com.revature.waterplant_webapp.exception.ValidatorException;
 import com.revature.waterplant_webapp.model.Order;
+import com.revature.waterplant_webapp.model.Reserve;
 import com.revature.waterplant_webapp.model.Stock;
 import com.revature.waterplant_webapp.model.User;
 import com.revature.waterplant_webapp.validator.UserValidator;
@@ -19,6 +22,7 @@ public class UserService {
 	 private static UserInterface udao=new UserDAO();
 	 private static OrderInterface odao=new OrderDAO();
 	 private static StockInterface sdao=new StockDAO();
+	 private static ReserveInterface rdao=new ReserveDAO();
 
 	public User login(String email, String password) throws ServiceException {
 		
@@ -82,6 +86,26 @@ public User adminLogin(String email, String password) throws ServiceException {
 		}
 		
 		
+	}
+
+	public Reserve reserveCans(Reserve reserve, int reservedcans) throws ServiceException {
+		Stock stock=null;
+	
+		try {
+			rdao.addReserve(reserve, reservedcans);
+			stock=sdao.findStock();
+			int availableCans=stock.getAvailableCans();
+			int updateCans=availableCans-reservedcans;
+			sdao.updateStock(updateCans);
+		    reserve=rdao.findById(reserve.getUserId());
+			
+		} catch (DBException e) {
+			
+			e.printStackTrace();
+			throw new ServiceException(e.getMessage());
+		}
+		
+		return reserve;
 	}		
 		
 
